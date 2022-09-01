@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./fonts/Poppins-Regular.woff2);
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./fonts/Poppins-Medium.woff2);
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./fonts/Poppins-SemiBold.woff2);
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./fonts/Poppins-Bold.woff2);
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background: linear-gradient(#fff, #E3EDF6);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+main {
+    margin: 20px 60px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+
+button {
+    border-style: none;
+}
+
+/* TO DO FROM */
+
+.todo__form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.todo__form.animation-shake {
+    animation: shake 2s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(-10px);
+    }
+
+    25% {
+        transform: translateX(10px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(-0px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+
+.todo__add {
+    background-color: #5A94F7;
+    padding: 13px 18px;
+    border-radius: 50%;
+
+    color: #fff;
+}
+
+.todo__input {
+    width: 100%;
+    padding: 20px 20px;
+    border-radius: 20px;
+    border-style: none;
+    border: 1px solid #F0F3F4;
+    font-size: 20px;
+}
+
+/* DIV WITH DEALS */
+
+
+/* .deal {
+    overflow: auto;
+    max-height: 70vh;
+} */
+
+.deals__item {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 20px 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #F0F3F4;
+    border-radius: 20px;
+    animation: deal-appearing 1s ease-in-out;
+    animation-fill-mode: forwards;
+    box-shadow: 0px 5px 5px #EFF2F3;
+}
+
+@keyframes deal-appearing {
+    from {
+        transform: translateY(-30px) scale(0.7);
+        z-index: -1;
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        z-index: 3;
+    }
+}
+
+.deal__text {
+    margin: auto 0;
+}
+
+
+.deals__item.overline>.deal__text {
+    color: #C9C9C9;
+    text-decoration-line: line-through;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #57C4A6;
+}
+
+.deal__done {
+    background-color: #57C4A6;
+    padding: 10px 12px;
+    border-radius: 50%;
+}
+
+.deal__delete {
+    background-color: #EE595A;
+    padding: 10px 12px;
+    border-radius: 50%;
+}
+
+
+.deals__item.not-active-animation {
+    animation: vanishing 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes vanishing {
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+.not-active {
+    display: none;
+}
+
+/* GREEN LINE */
+
+.deals__item {
+    position: relative;
+}
+
+.green-line {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 3px;
+    background-color: #57C4A6;
+}
+
+/* OVERLINE добавляется к родителю, а через него уже редактирую child-elements */
+
+/* .overline .green-line {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 3px;
+    background-color: #57C4A6;
+    animation: width-grow 2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes width-grow {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 40%;
+    }
+} */
+
+/* WELCOME TEXT */
+
+.welcome__text {
+    font-size: 30px;
+    color: #A4A5A6;
+    text-align: center;
+}
+
+/* FOOTER */
+
+.counting {
+    background-color: #E5EAED;
+
+}
+
+/* ADAPTIVE */
+
+@media (max-width: 461px) {
+    main {
+        margin: 20px 30px;
+    }
+}
+
+@media (max-width: 400px) {
+
+
+    .deals__item {
+        flex-direction: column;
+    }
+
+    .buttons-flex-wrapper {
+        align-self: flex-end;
+    }
+}
