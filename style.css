@@ -48,6 +48,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    margin: 0;
     height: 100vh;
     background: linear-gradient(#fff, #E3EDF6);
     background-size: cover;
@@ -57,7 +59,8 @@ body {
 }
 
 main {
-    margin: 20px 60px;
+    height: 100vh;
+    margin: 0px 60px;
 }
 
 h1 {
