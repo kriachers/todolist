@@ -118,7 +118,7 @@ divDeal.addEventListener('click', function () {
 
 
 function showTasks() {
-    divCounting.innerHTML = `<p>You need to make ${currentTasks} tasks!</p> <p>You already done ${doneTasks} tasks!</p>`
+    divCounting.innerHTML = `<p class='counting__paragraph'>You need to make ${currentTasks} tasks!</p> <p class='counting__paragraph'>Already done ${doneTasks} tasks!</p>`
 }
 showTasks();
 
