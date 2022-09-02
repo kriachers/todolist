@@ -259,19 +259,30 @@ button {
 /* FOOTER */
 
 .counting {
+    position: fixed;
     z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 100%;
     background-color: #E5EAED;
-    position: fixed;
     left: 0;
     bottom: 0;
     background-color: #5A94F7;
     height: 10vh;
 }
 
+.counting__wrapper {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .counting__paragraph {
     color: white;
-    text-align: center;
     font-size: 20px;
 }
 
