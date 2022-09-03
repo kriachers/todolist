@@ -156,6 +156,10 @@ button {
     animation: deal-appearing 1s ease-in-out;
     animation-fill-mode: forwards;
     box-shadow: 0px 5px 5px #EFF2F3;
+
+    /* убираем баг с мобильным появлением в хроме */
+    transform: translateY(-30px) scale(0.7);
+    z-index: -1;
 }
 
 @keyframes deal-appearing {
