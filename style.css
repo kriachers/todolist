@@ -50,7 +50,7 @@ body {
     justify-content: space-between;
 
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(#fff, #E3EDF6);
     background-size: cover;
     background-repeat: no-repeat;
